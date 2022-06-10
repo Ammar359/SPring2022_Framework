@@ -1,13 +1,14 @@
 package StepDefinition;
 
-import Web.MyDriver;
+
+import Pages.Web.MyDriver;
 import cucumber.api.java.en.Given;
 
 public class CommonSD {
 
-    @Given("^I am on (facebook|darksky|hotels|Guru) landing page$")
+    @Given("^I am on (facebook|darksky|Guru) landing page$")
     public void openWebPage(String webPageName) {
-        switch (webPageName) {
+        switch (webPageName.toLowerCase()) {
             case "facebook":
                 MyDriver.launchUrlOnNewWindow("https://www.facebook.com/");
                 break;

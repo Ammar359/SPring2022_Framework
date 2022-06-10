@@ -19,14 +19,27 @@ public class PropReader {
     public PropReader() {
         Properties prop = new Properties();
         try {
-            InputStream is = new FileInputStream("src/test/resources/Data.properties");
+            InputStream is = new FileInputStream("Data.properties");
 
             prop.load(is);
 
+            if (System.getProperty("browser") != null) {
+                browser = System.getProperty("browser");
+            } else {
+                browser = prop.getProperty("browser");
+            }
+
+            if (System.getProperty("runOn") != null) {
+                runOn = System.getProperty("runOn");
+            } else {
+                runOn = prop.getProperty("runOn");
+            }
+
             url = prop.getProperty("url");
-            browser = prop.getProperty("browser");
+            // runOn = prop.getProperty("runOn");
+            // browser = prop.getProperty("browser");
             version = prop.getProperty("version");
-            runOn = prop.getProperty("runOn");
+
             sauceUser = prop.getProperty("sauceUser");
             sauceKey = prop.getProperty("sauceKey");
             os = prop.getProperty("os");

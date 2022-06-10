@@ -1,7 +1,8 @@
 package StepDefinition;
 
 import Pages.Guru.LandingPage;
-import Web.MyDriver;
+
+import Pages.Web.MyDriver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,7 +13,7 @@ public class OthersSD {
 
     @Given("^I am on Guru landing page$")
     public void openGugu() {
-        MyDriver.launchUrlOnNewWindow("https://demo.guru99.com/test/delete_customer.php/delete_customer.php/");
+       MyDriver.launchUrlOnNewWindow("https://demo.guru99.com/test/delete_customer.php/delete_customer.php/");
     }
 
     @When("I enter the customer id as (.+)")

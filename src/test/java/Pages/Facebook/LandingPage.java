@@ -2,7 +2,8 @@ package Pages.Facebook;
 
 
 import Pages.Commands;
-import Web.MyDriver;
+
+import Pages.Web.MyDriver;
 import org.openqa.selenium.By;
 
 public class LandingPage extends Commands {
