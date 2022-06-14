@@ -1,7 +1,8 @@
 package Tests.Darksky;
 
 import Pages.Darksky.LandingPage;
-import Web.MyDriver;
+
+import Pages.Web.MyDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

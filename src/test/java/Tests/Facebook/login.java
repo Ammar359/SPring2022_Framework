@@ -3,7 +3,7 @@ package Tests.Facebook;
 import Helper.Misc;
 import Pages.Facebook.LandingPage;
 import Pages.Facebook.LoginErrorPage;
-import Web.MyDriver;
+import Pages.Web.MyDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,7 +24,7 @@ public class login {
      */
     @Test
     public void InvalidCredentials() {
-        MyDriver.launchUrlOnNewWindow("https://www.facebook.com/");
+      MyDriver.launchUrlOnNewWindow("https://www.facebook.com/");
 
         LandingPage landingPage = new LandingPage();
         landingPage.enterLoginEmail("$%^&*(");

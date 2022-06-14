@@ -2,8 +2,6 @@ package StepDefinition.Facebook;
 
 import Pages.Facebook.LandingPage;
 import Pages.Facebook.LoginErrorPage;
-import Web.MyDriver;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
@@ -64,7 +62,7 @@ public class LoginSD {
         pattern starts with I
          enter ANYTHING in login <password or username>patternEnds
      */
-    @Given("^I enter (.+) in login (password|username)$")
+    /**@Given("^I enter (.+) in login (password|username)$")
     public void enterLoginCredentials(String data, String field) {
         switch (field.toLowerCase()) {
             case "username":
@@ -77,7 +75,7 @@ public class LoginSD {
                 System.out.println("Incorrect field name -> " + field);
         }
     }
-
+*/
     @Then("^I [vV]erify error is displayed$")
     public void isLoginErrorDisplayed() {
         Assert.assertTrue(lePage.isLoginErrorDisplayed(), "Login error is not displayed");

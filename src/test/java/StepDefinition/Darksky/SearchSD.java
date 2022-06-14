@@ -1,8 +1,6 @@
 package StepDefinition.Darksky;
 
 import Pages.Darksky.LandingPage;
-import Web.MyDriver;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;

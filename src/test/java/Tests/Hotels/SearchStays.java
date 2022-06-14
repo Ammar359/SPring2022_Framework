@@ -1,9 +1,6 @@
 package Tests.Hotels;
 
-import Pages.Hotels.LandingPage;
-import Web.MyDriver;
-import org.testng.annotations.Test;
-
+/**
 public class SearchStays {
     @Test
     public void selectDateInCalendar() {
@@ -44,3 +41,4 @@ public class SearchStays {
 
 
 }
+ */
