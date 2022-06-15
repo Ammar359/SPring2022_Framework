@@ -26,11 +26,14 @@ public class LandingPage extends Commands {
         type(searchInputLocator, location);
     }
 
+    private void clearField(By searchInputLocator) {
+    }
+
     public void clickSearchButton() {
         clickIt(searchBtnLocator);
     }
 
-    // method to scroll to Time Machine button
+    // method to scroll to Time Machine button  
     public WebElement scrollToTimeMachineButton() {
         return scrollToElement(timeMachineLocator);
     }

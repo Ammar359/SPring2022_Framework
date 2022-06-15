@@ -12,11 +12,14 @@ import org.testng.Assert;
 public class TravelerBoxSD {
 
     TravelerBox gn = new TravelerBox();
+    String beforeText = "";
+    String afterText = "";
 
         @When("^I click traveler box$")
         public void clickTravelerBox () {
             gn.clickTravelersBox();
         }
+
         @Then("^I increase adults number$")
         public void addAdults () {
             for (int i=1; i<5; i++) {
@@ -30,6 +33,7 @@ public class TravelerBoxSD {
             for (int i = 1; i <= 2; i++) {
                 gn.clickChildrenIncreaseBtn();
             }
+
         }
         @Then("^I choose first children age$")
         public void addChildrenAge () {

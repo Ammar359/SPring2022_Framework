@@ -11,10 +11,10 @@
 public class LandingPage extends Commands {
 
     // Navi link Locators
-    By topMenuSignInBtnLocator = By.xpath("//nav//button[text()='Sign in']");
-    By innerMenuSignInBtnLocator = By.xpath("//div[@class='actions']//a[@data-stid='link-header-account-signin']");
-    By signInBtnLocator = By.xpath("//nav//button[text()='Sign in']");
-    By signUpBtnLocator = By.xpath("//div[@class='actions']//a[@data-stid='link-header-account-signup']");
+    By topMenuSignInBtnLocator = By.xpath("///button[contains(text(),'Sign in')]");
+    By innerMenuSignInBtnLocator = By.xpath("//a[contains(text(),'Sign in')]");
+   // By signInBtnLocator = By.xpath(//a[contains(text(),'Sign in')]]");
+    By signUpBtnLocator = By.xpath("//a[contains(text(),'Sign up, it’s free')]");
     By fiveBottomLinksInInnerNavMenuLocator = By.xpath("//div[@class='header-guest-heading']/following-sibling::div//a");
     By hotelRewardsLinkLocator = By.xpath("//div[@class='header-guest-heading']/following-sibling::div//a/div[text()='Hotels.com® Rewards']");
     By feedbackLinkLocator = By.xpath("//div[@class='header-guest-heading']/following-sibling::div//a/div[text()='Feedback']");
@@ -64,11 +64,11 @@ public class LandingPage extends Commands {
     }
 
     public void clickSignInBtn() {
-        findWebElementWithWait(innerMenuSignInBtnLocator).click();
+        clickIt(innerMenuSignInBtnLocator);
     }
 
-    public void clickSignUpBtn() {
-        findWebElementWithWait(signUpBtnLocator).click();
+    public void clickSignUpBtnLoc() {
+        clickIt(signUpBtnLocator);
     }
 
     public void clickFeedbackPage() {

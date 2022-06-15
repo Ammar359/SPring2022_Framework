@@ -14,6 +14,8 @@ public class SignUpPage extends Commands {
     By passwordInputLocator = By.xpath("//*[@id='signupFormPasswordInput']");
     By signUpCheckboxLocator = By.xpath("//*[@id='signUpFormRememberMeCheck']");
     By signUpBtnLocator = By.xpath("//*[@id='signupFormSubmitButton']");
+    By signInCheckBox = By.xpath("//input[@id='signUpFormRememberMeCheck']");
+    By continueBtn = By.xpath("//button[@id='signupFormSubmitButton']");
 
 
     // Locators for Privacy and Terms & Conditions pages
@@ -22,12 +24,26 @@ public class SignUpPage extends Commands {
     By termsConditionsPageLinkLocator = By.xpath("//a[text()='Terms and Conditions']");
     By termsConditionsHeadingLocator = By.xpath("//h1[text()='Terms and Conditions']");
 
+    // Sign up page Methods
+
+    public void firstName(){
+        type(firstNameInputLocator,"!@#");
+    }
+    public void lastName(){
+        type(lastNameInputLocator,"%^&");
+    }
     public void enterEmail() {
         type(emailInputLocator, "joelwilliams@lou.com");
     }
 
     public void enterPassword() {
         type(passwordInputLocator, "blablabla123@");
+    }
+    public void signInBox(){
+        clickIt(signInCheckBox);
+    }
+    public void continueBtnBox(){
+        clickIt(continueBtn);
     }
 
 

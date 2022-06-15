@@ -2,7 +2,7 @@ Feature:
 
 
   Background:
-    Given I am on Hotels home page
+    Given I am on www.hotels.com
     When  I type Bora Bora in destination box
     And  I enter checkin and checkout dates
     And  I click search button
